@@ -1,0 +1,46 @@
+{
+  "name": "typing-speed-overlay",
+  "version": "0.1.0",
+  "description": "A tiny always-on-top window that shows your live typing speed (WPM). Counts keystrokes, never records them.",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "dev.typingspeedoverlay.app",
+    "productName": "Typing Speed Overlay",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  },
+  "dependencies": {
+    "uiohook-napi": "^1.5.5"
+  },
+  "devDependencies": {
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0"
+  }
+}

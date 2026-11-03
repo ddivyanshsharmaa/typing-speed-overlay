@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<style>
+  html, body { margin: 0; background: transparent; overflow: hidden; font-family: "Segoe UI", system-ui, sans-serif; }
+  #pill { position: relative; margin: 6px; height: 52px; border-radius: 14px; background: rgba(18,18,24,.82);
+          color: #fff; display: flex; align-items: baseline; justify-content: center; gap: 6px;
+          padding-top: 6px; box-sizing: border-box; -webkit-app-region: drag; user-select: none; }
+  #n { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .red { color: #ff5a5f; } .yellow { color: #ffd23f; } .green { color: #3ddc84; } .blue { color: #4da3ff; }
+  #n { transition: color .4s; }
+  #u { font-size: 12px; opacity: .6; }
+  #x { position: absolute; top: 2px; right: 6px; border: 0; background: none; color: #fff; opacity: 0;
+       font-size: 14px; cursor: pointer; -webkit-app-region: no-drag; transition: opacity .15s; }
+  #pill:hover #x { opacity: .7; } #x:hover { opacity: 1 !important; color: #ff6b6b; }
+</style>
+<div id="pill"><button id="x" title="Close">✕</button><span id="n" class="red">0</span><span id="u">WPM</span></div>
+<script>
+  overlay.onWpm(({ v, tier }) => { const n = document.getElementById('n'); n.textContent = v; n.className = tier; });
+  document.getElementById('x').onclick = () => overlay.close();
+</script>
