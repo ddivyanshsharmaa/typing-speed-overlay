@@ -42,5 +42,14 @@
   "devDependencies": {
     "electron": "^45.2.1",
     "electron-builder": "^26.18.0"
+  },
+  "author": {
+    "name": "Divyansh Sharma",
+    "email": "160004774+ddivyanshsharmaa@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/ddivyanshsharmaa/typing-speed-overlay",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddivyanshsharmaa/typing-speed-overlay.git"
   }
 }
