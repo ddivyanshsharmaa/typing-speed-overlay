@@ -15,6 +15,15 @@ It listens to the keyboard system-wide so it can count presses. It keeps only th
 press for 5 seconds, never *which* key, never what you type, and it makes no network connections.
 The whole thing is a few small files in `src/`, so you can read it in minutes.
 
+## Download
+
+Get the installer for your system from the [Releases page](https://github.com/ddivyanshsharmaa/typing-speed-overlay/releases/latest):
+Windows (`Setup` installer or portable `.exe`), macOS (Apple Silicon `.dmg`), Linux (`.AppImage` or `.deb`).
+
+The builds are **not code-signed** (signing certificates cost money), so:
+- **Windows:** SmartScreen may say "unknown publisher". Click *More info*, then *Run anyway*.
+- **macOS:** right-click the app, choose *Open*, then confirm. Intel Macs: run from source (below).
+
 ## Run it
 
 ```
